@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Ultime 8000+ Produits Digitaux - Droits de Revente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-blue: #00ffff;
+            --neon-green: #39ff14;
+            --neon-purple: #bf00ff;
+            --dark-bg: #0f0f1e;
+            --darker-bg: #070710;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--neon-pink);
+        }
+        
+        .countdown {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 8px;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue);
+            text-align: center;
+        }
+        
+        .countdown h3 {
+            color: var(--neon-blue);
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .countdown-unit {
+            background: var(--darker-bg);
+            padding: 5px 10px;
+            border-radius: 5px;
+            min-width: 50px;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+            padding: 40px 0;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--neon-purple);
+            opacity: 0.3;
+            filter: blur(50px);
+            z-index: -1;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--neon-green);
+            opacity: 0.3;
+            filter: blur(50px);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
+        
+        .hero-content h1 span {
+            color: var(--neon-green);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 30px var(--neon-pink);
+            transition: transform 0.5s;
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.02);
+        }
+        
+        .badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transform: rotate(5deg);
+            box-shadow: 0 0 20px var(--neon-pink);
+            z-index: 10;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            border: none;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 25px var(--neon-pink);
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 35px var(--neon-pink);
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 60px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .feature {
+            flex: 0 0 30%;
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 25px var(--neon-blue);
+        }
+        
+        .feature i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--neon-blue);
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--neon-green);
+        }
+        
+        .products-showcase {
+            margin: 80px 0;
+            text-align: center;
+        }
+        
+        .products-showcase h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--neon-blue);
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
+        
+        .product-categories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .category {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            flex: 0 0 22%;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .category:hover {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 25px var(--neon-green);
+        }
+        
+        .category i {
+            font-size: 2.5rem;
+            color: var(--neon-green);
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px var(--neon-green);
+        }
+        
+        .category h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .category p {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neon-pink);
+        }
+        
+        .testimonials {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 60px 0;
+            margin: 60px 0;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid var(--neon-purple);
+            box-shadow: 0 0 30px var(--neon-purple);
+        }
+        
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--neon-purple);
+        }
+        
+        .testimonial-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .testimonial {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            flex: 0 0 30%;
+            text-align: left;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial .author {
+            font-weight: 700;
+            color: var(--neon-blue);
+        }
+        
+        .guarantee {
+            text-align: center;
+            margin: 60px 0;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border: 1px solid var(--neon-green);
+            box-shadow: 0 0 30px var(--neon-green);
+        }
+        
+        .guarantee i {
+            font-size: 4rem;
+            color: var(--neon-green);
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px var(--neon-green);
+        }
+        
+        .guarantee h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .pricing {
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--neon-pink);
+        }
+        
+        .price-old {
+            font-size: 2rem;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+        
+        .price-new {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--neon-green);
+            text-shadow: 0 0 15px var(--neon-green);
+            margin: 10px 0;
+        }
+        
+        .price-note {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto 60px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 30px var(--neon-blue);
+        }
+        
+        form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: var(--neon-blue);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        form input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+        
+        form button {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 25px var(--neon-pink);
+            margin-top: 20px;
+        }
+        
+        form button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 35px var(--neon-pink);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-content, .hero-image {
+                padding: 20px;
+            }
+            
+            .features, .product-categories, .testimonial-container {
+                flex-direction: column;
+            }
+            
+            .feature, .category, .testimonial {
+                margin-bottom: 20px;
+            }
+            
+            .countdown {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-digital-tachograph"></i>
+                <span>DIGIBUSINESS PRO</span>
+            </div>
+            <div class="countdown">
+                <h3>OFFRE EXPIRE DANS:</h3>
+                <div class="countdown-timer">
+                    <div class="countdown-unit">02 <span>H</span></div>
+                    <div class="countdown-unit">45 <span>M</span></div>
+                    <div class="countdown-unit">18 <span>S</span></div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Pack Ultime <span>8000+</span> Produits Digitaux avec Droits de Revente</h1>
+                <p>Obtenez un accès immédiat à plus de 8000 produits digitaux avec droits de revente complets. Ebooks, formations vidéo, audios, POD et bien plus!</p>
+                <a href="#form" class="cta-button">Accéder Maintenant <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image">
+                <div class="badge">DROITS DE REVENDRE INCLUS</div>
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Pack de produits digitaux">
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="feature">
+                <i class="fas fa-globe"></i>
+                <h3>Revente Illimitée</h3>
+                <p>Vendez tous ces produits autant de fois que vous le souhaitez et gardez 100% des profits</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-download"></i>
+                <h3>Accès Immédiat</h3>
+                <p>Téléchargez tous les produits instantanément après votre achat</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lock"></i>
+                <h3>Accès à Vie</h3>
+                <p>Accédez à votre collection à vie </p>
+            </div>
+        </section>
+        
+        <section class="products-showcase">
+            <h2>Notre Collection Exclusive</h2>
+            <div class="product-categories">
+                <div class="category">
+                    <i class="fas fa-book"></i>
+                    <h3>Ebooks</h3>
+                    <p>4500+</p>
+                </div>
+                <div class="category">
+                    <i class="fas fa-headphones"></i>
+                    <h3>AudioBooks</h3>
+                    <p>1200+</p>
+                </div>
+                <div class="category">
+                    <i class="fas fa-video"></i>
+                    <h3>Formations Vidéo</h3>
+                    <p>500+</p>
+                </div>
+                <div class="category">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>POD + Tamplet </h3>
+                    <p>1800+</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2>Ils ont Transformé leur Business</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"J'ai commencé à revendre ces produits et en 3 mois, j'ai généré plus de 7 0330 00FCFA de revenus. Incroyable!"</p>
+                    <div class="author">Josef L.</div>
+                </div>
+                <div class="testimonial">
+                    <p>"La qualité des produits est exceptionnelle. Mes clients adorent et reviennent pour acheter d'autres formations."</p>
+                    <div class="author">Yasim </div>
+                </div>
+                <div class="testimonial">
+                    <p>"J'ai monté ma boutique en ligne en une semaine avec tous ces produits. Maintenant, je gagne ma vie en vendant du digital."</p>
+                    <div class="author">Martin., E-commerçante,CI</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="guarantee">
+            <i class="fas fa-shield-alt"></i>
+            <h2>Garantie Satisfait ou Remboursé 30 Jours</h2>
+            <p>Si vous n'êtes pas complètement satisfait de votre achat, nous vous remboursons intégralement sans condition.</p>
+        </section>
+        
+        <section class="pricing">
+            <h2>Investissement Unique</h2>
+            <div class="price-old">18000FCFA</div>
+            <div class="price-new">12000FCFA seulement</div>
+            <div class="price-note">Plus de 8000 produits avec droits de revente complets</div>
+            <a href="#form" class="cta-button">Obtenir le Pack <i class="fas fa-arrow-right"></i></a>
+        </section>
+        
+        <section id="form">
+            <form>
+                <h2>Rejoignez-nous Maintenant</h2>
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" placeholder="Votre numéro">
+                </div>
+                <button type="submit">Rejoindre Maintenant</button>
+            </form>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 DigiPack Pro. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Compte à rebours
+        function updateCountdown() {
+            const hours = document.querySelector('.countdown-unit:nth-child(1)');
+            const minutes = document.querySelector('.countdown-unit:nth-child(2)');
+            const seconds = document.querySelector('.countdown-unit:nth-child(3)');
+            
+            let h = parseInt(hours.textContent);
+            let m = parseInt(minutes.textContent);
+            let s = parseInt(seconds.textContent);
+            
+            s--;
+            
+            if (s < 0) {
+                s = 59;
+                m--;
+                
+                if (m < 0) {
+                    m = 59;
+                    h--;
+                    
+                    if (h < 0) {
+                        h = 0;
+                        m = 0;
+                        s = 0;
+                    }
+                }
+            }
+            
+            hours.textContent = h.toString().padStart(2, '0') + ' H';
+            minutes.textContent = m.toString().padStart(2, '0') + ' M';
+            seconds.textContent = s.toString().padStart(2, '0') + ' S';
+        }
+        
+        setInterval(updateCountdown, 1000);
+        
+        // Animation d'apparition des éléments au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Félicitations ! Votre accès au pack de produits digitaux est en cours de préparation. Vous recevrez un email de confirmation sous peu.');
+                form.reset();
+            });
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.feature, .category, .testimonial, .guarantee').forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
